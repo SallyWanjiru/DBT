@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: SALDBT
+    description: render database
+    database: sadb_hygl
+    schema: dbt_swanjiru
+    tables: 
+      - name: customers
+        description: customers table
+        columns:
+          - name: customer_id 
+            description: the unique customer identifier
+            tests:
+            - unique
+            - not_null 
+          
+
+        
